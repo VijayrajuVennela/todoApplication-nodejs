@@ -1,0 +1,64 @@
+# API 1: GET /todos/?status=TO%20DO
+GET http://localhost:3000/todos/?status=TO%20DO
+
+### API 1: GET /todos/?priority=HIGH
+GET http://localhost:3000/todos/?priority=HIGH
+
+### API 1: GET /todos/?priority=HIGH&status=IN%20PROGRESS
+GET http://localhost:3000/todos/?priority=HIGH&status=IN%20PROGRESS
+
+### API 1: GET /todos/?search_q=Play
+GET http://localhost:3000/todos/?search_q=Play
+
+### API 2: GET /todos/:todoId/
+GET http://localhost:3000/todos/1
+
+### API 3: POST /todos/
+POST http://localhost:3000/todos/
+Content-Type: application/json
+
+{
+    "id": 10,
+  "todo": "Finalize event theme",
+  "priority": "LOW",
+  "status": "TO DO"
+}
+
+### API 4: PUT /todos/:todoId/
+PUT http://localhost:3000/todos/1
+Content-Type: application/json
+
+{
+  "status": "DONE"
+}
+
+### API 4: PUT /todos/:todoId/
+PUT http://localhost:3000/todos/2
+Content-Type: application/json
+
+{ "priority": "HIGH" }
+
+### API 4: PUT /todos/:todoId/
+PUT http://localhost:3000/todos/3
+Content-Type: application/json
+
+{ "todo": "Some task" }
+
+### API 4: PUT /todos/:todoId/
+PUT http://localhost:3000/todos/1
+Content-Type: application/json
+
+{
+  "priority": "HIGH"
+}
+
+### API 4: PUT /todos/:todoId/
+PUT http://localhost:3000/todos/1
+Content-Type: application/json
+
+{
+  "todo": "Updated Task"
+}
+
+### API 5: DELETE /todos/:todoId/
+DELETE http://localhost:3000/todos/1
